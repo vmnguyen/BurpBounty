@@ -2281,6 +2281,7 @@ public class BurpBountyGui extends javax.swing.JPanel {
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenuItem7 = new javax.swing.JMenuItem();
         jTabbedPane2 = new javax.swing.JTabbedPane();
+        jPanel0 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         jLabel43 = new javax.swing.JLabel();
@@ -2387,7 +2388,7 @@ public class BurpBountyGui extends javax.swing.JPanel {
                 showprofiles(evt);
             }
         });
-
+        jPanel0.setAutoscrolls(true);
         jPanel1.setAutoscrolls(true);
 
         jPanel6.setEnabled(false);
@@ -2655,6 +2656,27 @@ public class BurpBountyGui extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
+
+        javax.swing.GroupLayout jPanel0Layout = new javax.swing.GroupLayout(jPanel0);
+        jPanel0.setLayout(jPanel0Layout);
+        jPanel0Layout.setHorizontalGroup(
+            jPanel0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel0Layout.createSequentialGroup()
+                .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel0Layout.setVerticalGroup(
+            jPanel0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel0Layout.createSequentialGroup()
+                .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+
+
+        jTabbedPane2.addTab("     Smart Scan     ", jPanel0);
+
+        
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -2671,6 +2693,7 @@ public class BurpBountyGui extends javax.swing.JPanel {
         );
 
         jTabbedPane2.addTab("     Profiles     ", jPanel1);
+
 
         jLabel50.setText("In this section specify the base profiles directory. ");
 
@@ -3227,6 +3250,7 @@ public class BurpBountyGui extends javax.swing.JPanel {
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
+    public javax.swing.JPanel jPanel0;
     public javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     public javax.swing.JPanel jPanel4;
