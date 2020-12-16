@@ -59,6 +59,7 @@ import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
+import javax.swing.JSplitPane;
 
 
 public class BurpBountyGui extends javax.swing.JPanel {
@@ -2119,14 +2120,7 @@ public class BurpBountyGui extends javax.swing.JPanel {
             }
         }
     }
-    protected javax.swing.JComponent makeTextPanel(String text) {
-        javax.swing.JPanel panel = new javax.swing.JPanel(false);
-        javax.swing.JLabel filler = new javax.swing.JLabel(text);
-        filler.setHorizontalAlignment(javax.swing.JLabel.CENTER);
-        panel.setLayout(new java.awt.GridLayout(1, 1));
-        panel.add(filler);
-        return panel;
-    }
+
     public void deleteProfile(JTable table) {
 
         Gson gson = new Gson();
@@ -2423,7 +2417,7 @@ public class BurpBountyGui extends javax.swing.JPanel {
                 newTagCombo2ActionPerformed(evt);
             }
         });
-        jtabpane0.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        //jtabpane0.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         jtabpane.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
 
         table3.setAutoCreateRowSorter(true);
@@ -2526,10 +2520,14 @@ public class BurpBountyGui extends javax.swing.JPanel {
 
 
         javax.swing.JTabbedPane tabbedPane = new javax.swing.JTabbedPane();
-        javax.swing.JComponent panel1 = makeTextPanel("Panel #1");
+        javax.swing.JComponent splitRulePane = SmartScanGUI.createRulePane();
+        javax.swing.JSplitPane splitPaneDashboard = SmartScanGUI.createDashboard();
 
-        jtabpane0.addTab("     Active Profiles     ", panel1); //add new tab
-        jtabpane.addTab("     Active Profiles     ", jPanel3);
+
+        jtabpane0.addTab("     Dashboard     ", splitPaneDashboard); //add new tab
+        jtabpane0.addTab("     Active Rules     ", splitRulePane); //add new tab
+        
+        jtabpane.addTab("     Active Profiles    ", jPanel3);
 
         table1.setAutoCreateRowSorter(true);
         table1.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
