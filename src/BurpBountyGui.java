@@ -2288,8 +2288,10 @@ public class BurpBountyGui extends javax.swing.JPanel {
         jLabel44 = new javax.swing.JLabel();
         jLabel45 = new javax.swing.JLabel();
         newTagCombo2 = new javax.swing.JComboBox<>();
+        jtabpane0 = new javax.swing.JTabbedPane();
         jtabpane = new javax.swing.JTabbedPane();
         jPanel3 = new javax.swing.JPanel();
+        jPanel10 = new javax.swing.JPanel(); //add new sub panel
         jScrollPane5 = new javax.swing.JScrollPane();
         table3 = new javax.swing.JTable();
         jButton16 = new javax.swing.JButton();
@@ -2392,6 +2394,7 @@ public class BurpBountyGui extends javax.swing.JPanel {
         jPanel1.setAutoscrolls(true);
 
         jPanel6.setEnabled(false);
+        //jPanel9.setEnabled(false);
 
         jLabel43.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel43.setForeground(new java.awt.Color(255, 102, 51));
@@ -2411,7 +2414,7 @@ public class BurpBountyGui extends javax.swing.JPanel {
                 newTagCombo2ActionPerformed(evt);
             }
         });
-
+        jtabpane0.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         jtabpane.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
 
         table3.setAutoCreateRowSorter(true);
@@ -2480,6 +2483,39 @@ public class BurpBountyGui extends javax.swing.JPanel {
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 614, Short.MAX_VALUE))
         );
 
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    //.addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    //.addComponent(button13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    //.addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    )
+                .addContainerGap(997, Short.MAX_VALUE))
+            .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel10Layout.createSequentialGroup()
+                    .addGap(133, 133, 133)
+                    //.addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 967, Short.MAX_VALUE)
+                    .addContainerGap()))
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addContainerGap()
+                //.addComponent(jButton16)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                //.addComponent(jButton2)
+                //.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                //.addComponent(button13)
+                .addContainerGap(506, Short.MAX_VALUE))
+            .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 614, Short.MAX_VALUE))
+        );
+
+        jtabpane0.addTab("     Active Profiles     ", jPanel10); //add new tab
         jtabpane.addTab("     Active Profiles     ", jPanel3);
 
         table1.setAutoCreateRowSorter(true);
@@ -2549,6 +2585,7 @@ public class BurpBountyGui extends javax.swing.JPanel {
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 614, Short.MAX_VALUE))
         );
 
+        //jtabpane0.addTab("   Passive Request Profiles   ", jPanel5);
         jtabpane.addTab("   Passive Request Profiles   ", jPanel5);
 
         table2.setAutoCreateRowSorter(true);
@@ -2618,6 +2655,7 @@ public class BurpBountyGui extends javax.swing.JPanel {
                 .addComponent(jScrollPane10, javax.swing.GroupLayout.DEFAULT_SIZE, 614, Short.MAX_VALUE))
         );
 
+        //jtabpane0.addTab("   Passive Response Profiles   ", jPanel7);
         jtabpane.addTab("   Passive Response Profiles   ", jPanel7);
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
@@ -2655,8 +2693,43 @@ public class BurpBountyGui extends javax.swing.JPanel {
                 .addComponent(jtabpane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                 .addContainerGap())
         );
-
-
+        /*
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jtabpane0, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel43)
+                            .addComponent(jLabel44, javax.swing.GroupLayout.PREFERRED_SIZE, 575, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGap(380, 380, 380)
+                .addComponent(jLabel45)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(newTagCombo2, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(jLabel43)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel44)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(newTagCombo2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel45))
+                .addGap(18, 18, 18)
+                .addComponent(jtabpane0, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        */
         javax.swing.GroupLayout jPanel0Layout = new javax.swing.GroupLayout(jPanel0);
         jPanel0.setLayout(jPanel0Layout);
         jPanel0Layout.setHorizontalGroup(
@@ -2672,11 +2745,9 @@ public class BurpBountyGui extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-
-
         jTabbedPane2.addTab("     Smart Scan     ", jPanel0);
 
-        
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -3253,9 +3324,11 @@ public class BurpBountyGui extends javax.swing.JPanel {
     public javax.swing.JPanel jPanel0;
     public javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel10; // add new subpanel
     public javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     public javax.swing.JPanel jPanel6;
+    public javax.swing.JPanel jPanel9; //add new Panel
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPopupMenu jPopupMenu1;
@@ -3267,6 +3340,7 @@ public class BurpBountyGui extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JSeparator jSeparator13;
     public javax.swing.JTabbedPane jTabbedPane2;
+    private javax.swing.JTabbedPane jtabpane0;
     private javax.swing.JTabbedPane jtabpane;
     public javax.swing.JList<String> listtagmanager;
     private javax.swing.JComboBox<String> newTagCombo2;
